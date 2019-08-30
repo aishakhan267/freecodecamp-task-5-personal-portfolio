@@ -1,122 +1,196 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: white;
+    background-color: black;
     color: white;
     font-family: 'Lobster', cursive;
+    display: flex;
+    flex-direction: column;
 }
+
 a {
     text-decoration: none;
-    color:rgb(34, 34, 233)
+    color: rgb(34, 34, 233)
 }
+
 ul li {
     list-style-type: none;
-    margin-left:32px;
+    margin-left: 32px;
     padding-bottom: 20px;
     padding-top: 20px;
 }
-ul li:nth-child(3){
+
+ul li:nth-child(3) {
     margin-right: 16px;
 }
+
 ul li:hover {
-    border:1px solid white;
+    border: 1px solid white;
     background-color: white;
     border-radius: 5px;
-    /* padding:1px; */
-    /* margin:4px; */
 }
+
 header {
     position: sticky;
     top: 0;
 }
+
 .navigation {
     display: flex;
     justify-content: flex-end;
     font-family: 'Lobster', cursive;
     font-size: 30px;
-    background-color:black;
-    margin-bottom:0px;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-bottom: 0px;
     margin-top: 0;
 }
-h1{
+
+h1 {
     padding: 0;
     margin-top: 100px;
-    font-size:58px;
+    font-size: 58px;
 }
+
 .page-first {
     background: url(https://moneycrashers-sparkchargemedia.netdna-ssl.com/wp-content/uploads/2019/01/couple-star-gazing-walking-outdoors-night-810x455.jpg);
     background-size: cover;
-    height:800px;
+    height: 800px;
+    width: 100%;
 }
+
 .btn-list a {
-    margin-left:6px;
+    margin-left: 6px;
     border: 1px solid black;
-    border-radius:5px;
+    border-radius: 5px;
     padding: 6px 16px;
-    /* background-color: #b7844d; */
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.452);
     font-size: 28px;
 }
+
 .btn-list a:hover {
-    border:1px solid white;
+    border: 1px solid white;
     background-color: white;
     border-radius: 5px;
     padding: 6px 16px;
-
 }
+
 .btn-list a:nth-child(2) i {
     color: purple;
 }
-.btn-list a:nth-child(3) i{
-    color:red;
+
+.btn-list a:nth-child(3) i {
+    color: red;
 }
+
 #welcome-section {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height:100vh;
+    height: 100vh;
     width: 100%;
 }
+
+.btn-list {
+    display: flex;
+}
+
 .page-two {
-    background:url(https://www.islamicity.org/wp-content/plugins/blueprint-timthumb/timthumb.php?src=https://media.islamicity.org/wp-content/uploads/2018/11/What-is-Islam-800Pix-MOBILE-NO-TEXT.jpg&w=600&q=100);
+    background: url(https://www.islamicity.org/wp-content/plugins/blueprint-timthumb/timthumb.php?src=https://media.islamicity.org/wp-content/uploads/2018/11/What-is-Islam-800Pix-MOBILE-NO-TEXT.jpg&w=600&q=100);
     background-size: cover;
     height: 800px;
     padding-top: 5%;
     text-align: center;
 }
+
 p {
     font-size: 2.2em;
 }
+
 .page-three {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: url(https://images.unsplash.com/photo-1554876269-3045eeb59550?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=691&q=80);
-    height:1200px;
-    background-size:cover;
-    padding-top:5%;
-    padding-left: 100px;
+    height: 1200px;
+    background-size: cover;
+    padding-top: 5%;
+    /* padding-left: 100px; */
     text-align: center;
 }
+
 .padding-top {
+    display: flex;
+    align-self: center;
     padding-top: 2%;
     padding-bottom: 2%;
 }
-.project-tile {
-    display:grid;
-    grid-template-columns:1fr 1fr 1fr;
-    grid-template-rows:1fr 1fr;
-    height: 700px; 
-    width: 1200px;
-    grid-gap: 12px 15px;
-    text-align: center; 
+
+#projects {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }
+
+.check {
+    display: flex;
+}
+
+.project-tile {
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 300px 300px;
+    height: 700px;
+    grid-gap: 12px 20px;
+    text-align: center;
+}
+
 figcaption a {
     color: white;
-    font-size:40px;
+    font-size: 38px;
 }
-@media screen and (max-width:750px){
-    .project-tile{
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-    }
 
+@media screen and (max-width:1350px) {
+    .btn-list a {
+        padding: 4px 12px;
+        border-radius: 3px;
+        font-size: 22px;
+    }
+    .project-tile {
+        grid-template-columns: 300px 300px;
+        grid-template-rows: 225px 225px 225px;
+        grid-gap: 6px 7px;
+        /* width: 1000px; */
+    }
+    .images img {
+        height: 150px;
+        width: 140px;
+    }
+    figcaption a {
+        font-size: 28px;
+    }
+    figcaption{
+        margin: 0;
+    }
+}
+
+@media screen and (max-width:425px) {
+    .project-tile {
+        grid-template-columns: 150px 150px;
+        grid-template-rows: 200px 200px 200px;
+        grid-gap: 6px 7px;
+    }
+    .images img {
+        height: 100px;
+        width: 100px;
+    }
+    figcaption a {
+        font-size: 17px;
+    }
+    ul li a {
+        font-size: 14px;
+    }
+    .navigation {
+        height: 80px;
+    }
 }
